@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.8;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+.separate-img {
+    margin-right: calc(50% - 50vw);/* この部分の使い方がよく分かっていない（画像の全幅表示） */
+	margin-left: calc(50% - 50vw);
+    width: 100vw;
+}
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.section-title {
+    font-family: 'Lato', sans-serif;
+    margin-top: 60px;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+}
+.subtitle {
+    margin-bottom: 40px;
+}
+.en {
+    font-family: 'Lato', sans-serif;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 5px 15px;
+}
+/* メインビジュアル */
+#fv {
+    display: flex;
+}
+#fv-text {
+    width: 450px;
+    padding-left: 15%;
+    padding-top: 3%;
+}
+#fv-text > h1 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 2.5;
+}
+#fv-img {
+    width: 65%;
+}
+#fv-img img {
+    width: 100%;
+}
+#item-btn {
+    border: 1px solid #B9A8A2;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+    background-color: #B9A8A2;
+    display: table;
+}
+#item-btn a {
+    display: table-cell;
+    color: white;
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* feature */
+.section-title, .subtitle {
+    text-align: center;
+}
+#main-feature {
+    display: flex;
+    margin-bottom: 70px;
+}
+#feature-text {
+    padding: 70px 30px 0px 30px;
+}
+#sub-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.each-feature {
+    margin: 0 auto;
+    width: 30vw;
+}
+.en-name {
+    color: #BAA8A2;
+}
+
+/* line-up */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.product {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.product h3 {
+    margin: 0;
+}
+.product-btn {
+    border: 1px solid #B9A8A2;
+    background-color: #B9A8A2;
+    color: white;
+    width: 60%;
+    height: 7%;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn04 {
+    vertical-align: bottom;
+}
+/* instagram */
+#instagram-posts {
+    display: flex;
+    justify-content: center;
+}
+.instagram-photo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#instagram-btn {
+    text-align: center;
+    margin: 30px auto;
+    width: 30%;
+    height: 50px;
+    border: 1px solid #B9A8A2;
+    background-color: #B9A8A2;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#instagram {
+    margin-bottom: 100px;
+}
+
+/* フッター */
+footer {
+    background-color: #B9A8A2;
+}
+ul {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+li {
+    color: white;
+}
+li:not(:first-child) {
+    margin-left: 15px;
+}
+#copyright {
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid white;
+}
