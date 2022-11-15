@@ -98,8 +98,13 @@ header {
     margin-bottom: 100px;
 }
 .each-feature {
-    margin: 0 auto;
     width: 30vw;
+}
+.each-feature:not(:first-child) {
+    margin-left: 30px;
+}
+.each-feature img {
+    width: 100%;
 }
 .en-name {
     color: #BAA8A2;
@@ -113,11 +118,17 @@ header {
 .product {
     text-align: center;
     margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 50px;
 }
 .product h3 {
     margin: 0;
 }
 .product-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border: 1px solid #B9A8A2;
     background-color: #B9A8A2;
     color: white;
@@ -179,4 +190,60 @@ li:not(:first-child) {
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid white;
+}
+
+/* productページ */
+.product-introduction {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#product-int-text {
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 50%;
+    margin: 0 auto;
+}
+#purchase-btn {
+    border: 1px solid #B9A8A2;
+    background-color: #B9A8A2;
+    color: white;
+    width: 40%;
+    height: 10%;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#related-products {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+.product-box {
+    width: 30%;
+    margin: 10px;
+    position: relative;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+/* 404ページ */
+#error-content {
+    text-align: center;
+    margin: 100px;
+}
+#return-btn {
+    border: 1px solid #B9A8A2;
+    background-color: #B9A8A2;
+    color: white;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
