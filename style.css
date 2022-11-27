@@ -7,7 +7,7 @@ html {
 body {
     font-family: 'Noto Serif JP', serif;
     line-height: 1.8;
-    margin: 0;
+    margin: 0 auto;
 }
 a {
     text-decoration: none;
@@ -19,7 +19,7 @@ li {
     box-sizing: border-box;
 }
 .separate-img {
-    margin-right: calc(50% - 50vw);/* この部分の使い方がよく分かっていない（画像の全幅表示） */
+    margin-right: calc(50% - 50vw);/* この部分の使い方がよく分かっていないので、解説をお願いしたいです（画像の全幅表示） */
 	margin-left: calc(50% - 50vw);
     width: 100vw;
 }
@@ -29,31 +29,39 @@ li {
 }
 .section-title {
     font-family: 'Lato', sans-serif;
-    margin-top: 60px;
+    font-size: 32px;
+    margin-top: 56px;
     letter-spacing: 0.5em;
     text-indent: 0.5em;
 }
 .subtitle {
     margin-bottom: 40px;
+    font-size: 18px;
 }
 .en {
     font-family: 'Lato', sans-serif;
+}
+h3 {
+    font-size: 20px;
+}
+p {
+    font-size: 16px;
 }
 
 /* ヘッダー */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 15px 5px 15px;
+    padding: 16px 16px 8px 16px;
 }
 /* メインビジュアル */
 #fv {
     display: flex;
 }
 #fv-text {
-    width: 450px;
+    min-width: 500px;
     padding-left: 15%;
-    padding-top: 3%;
+    padding-top: 80px;
 }
 #fv-text > h1 {
     font-size: 40px;
@@ -61,10 +69,12 @@ header {
     line-height: 2.5;
 }
 #fv-img {
-    width: 65%;
+    width: 70%;
 }
 #fv-img img {
     width: 100%;
+    height: 689px;
+    object-fit: cover;
 }
 #item-btn {
     border: 1px solid #B9A8A2;
@@ -87,7 +97,7 @@ header {
 }
 #main-feature {
     display: flex;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
 }
 #feature-text {
     padding: 70px 30px 0px 30px;
@@ -108,6 +118,12 @@ header {
 }
 .en-name {
     color: #BAA8A2;
+}
+h3 {
+    font-size: 18px;
+}
+p {
+    font-size: 14px;
 }
 
 /* line-up */
@@ -178,7 +194,7 @@ ul {
     padding-left: 0;
     margin-bottom: 20px;
 }
-li {
+footer a {
     color: white;
 }
 li:not(:first-child) {
@@ -246,4 +262,133 @@ li:not(:first-child) {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    /* メインビジュアル */
+    #fv {
+        flex-direction: column-reverse;
+    }
+    #fv-text > h1 {
+        font-size: 24px;
+    }
+    #fv-img {
+        width: 100%;
+        height: 50vh;
+    }
+    #fv-img img {
+        height: 50vh;
+        object-fit: cover;
+    }
+    #fv-text {
+        padding-top: 0;
+    }
+    #item-btn a {
+        height: 60px;
+    }
+
+    /* feature */
+    .wrapper {
+        margin: 0 24px;
+    }
+    .section-title {
+        margin-top: 96px;
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    #main-feature {
+        flex-direction: column;
+        width: 100%;
+    }
+    #main-feature-img img {
+        width: 100%;
+    }
+    #sub-features {
+        flex-direction: column;
+    }
+    .each-feature {
+        width: 100%;
+    }
+    .each-feature img {
+        width: 100%;
+    }
+    .each-feature:not(:first-child) {
+        margin-left: initial;
+    }
+
+    /* line-up */
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .product img {
+        width: 100%;
+    }
+    .product > p {
+        padding-bottom: 24px;
+    }
+    .product-btn {
+        height: 60px;
+    }
+
+    /* instagram */
+    #instagram-posts {
+        flex-direction: column;
+    }
+    #instagram-posts img {
+        width: 100%;
+    }
+    #instagram-btn {
+        width: 60%;
+        height: 60px;      
+    }
+
+    /* footer */
+    footer {
+        text-align: center;
+    }
+    footer ul {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    footer ul li {
+        width: fit-content;
+    }
+    li:not(:first-child) {
+        margin-left: initial;
+    }
+    #spacer {
+        width: 100%;
+    }
+
+    /* productページ */
+    .product-introduction {
+        flex-direction: column;
+    }
+    .product-introduction img {
+        width: 100%;
+    }
+    #product-int-text {
+        width: 100%;
+        padding: initial;
+    }
+    #related-products {
+        flex-direction: column;
+    }
+    .product-box {
+        width: 100%;
+    }
+    .product-box img {
+        width: 100%;
+    }
+    .product-box > p {
+        padding-bottom: 40px;
+    }
+    #purchase-btn {
+        height: 60px;
+        width: 60%;
+    }
 }
